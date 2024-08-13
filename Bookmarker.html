@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Bookmark</title>
+  <link rel="icon" href="images/" />
+  <link rel="stylesheet" href="all.min.css" />
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="indexq.js">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #f7ecde;
+}
+
+main h1 {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+  isolation: isolate;
+}
+
+main h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0;
+  bottom: 10px;
+  background-color: #fec260;
+  transition: height 350ms;
+  z-index: -1;
+}
+
+main h1:hover::before {
+  height: 50%;
+}
+
+.bookmark-body {
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+
+.bookmark-body h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.btn-delete {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
+}
+
+.btn-submit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+
+.btn-visit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+}
+
+table {
+  vertical-align: middle !important;
+}
+
+.box-info {
+  background-color: #0007;
+}
+
+.box-conent {
+  width: 500px;
+  z-index: 10;
+}
+
+.box-conent p {
+  font-family: "Bree Serif", serif;
+  font-size: 21px;
+  line-height: 1.3;
+  color: #352e28;
+}
+
+.rules li {
+  font-size: 18px;
+  padding-top: 10px;
+}
+.rules i {
+  color: #bb4120;
+}
+
+.circles span {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.circles span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.circles span:nth-child(2) {
+  background-color: #febe2e;
+}
+.circles span:nth-child(3) {
+  background-color: #4db748;
+}
+
+.logo {
+  width: 40px;
+}
+
+</style>
+<body>
+  <main class="interface py-5 position-relative">
+<div
+  class="container d-flex flex-column justify-content-center align-items-center"
+>
+  <h1 class="py-2 position-relative">Bookmarker</h1>
+  <div
+class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+  >
+<h2>
+ <img style="width: 25px; color: green;" src="images/bookmark_FILL0_wght400_GRAD0_opsz48.png" alt="bookmark 1">
+  Bookmark your favorite sites
+  <img style="width: 25px; color: green;" src="images/bookmark_FILL0_wght400_GRAD0_opsz48.png" alt="bookmark 2">
+</h2>
+<div
+  class="site-name w-100 d-flex flex-column justify-content-center">
+  <label for="bookmarkName" class="pb-2 fw-semibold">
+    <img style="width: 15px;" src="images/position_top_right_FILL0_wght400_GRAD0_opsz48.png" alt="site"> Site Name</label>
+  <input
+type="text"
+placeholder="Bookmark Name"
+class="form-control"
+id="bookmarkName"/>
+</div>
+<div class="site-url w-100 d-flex flex-column justify-content-center">
+  <label for="bookmarkURL" class="pb-2 fw-semibold">
+    <img style="width: 15px;" src="images/url.png" alt="site"> Site URL</label
+  >
+  <input
+type="url"
+placeholder="Website URL"
+class="form-control"
+id="bookmarkURL"/>
+</div>
+<button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+  </div>
+  <table class="table mt-4 text-center bg-light">
+<thead>
+  <th class="text-uppercase">Index</th>
+  <th class="text-uppercase">Website Name</th>
+  <th class="text-uppercase">Visit</th>
+  <th class="text-uppercase">Delete</th>
+</thead>
+<tbody id="tableContent"></tbody>
+  </table>
+</div>
+<div
+  class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+  <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+<header
+  class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+  <div class="circles d-flex">
+<span class="rounded-circle me-2"></span>
+<span class="rounded-circle me-2"></span>
+<span class="rounded-circle me-2"></span>
+  </div>
+  <button class="btn border-0" id="closeBtn">
+    <img style="width: 25px;" src="images/cancel_FILL0_wght400_GRAD0_opsz48.png" alt="site">
+  </button>
+</header>
+<p class="m-0 pb-2">
+  Site Name or URL is not valid, Please follow the rules below:
+</p>
+<ol class="rules list-unstyled m-0">
+  <li>
+    <img style="width: 15px;" src="images/step_FILL0_wght400_GRAD0_opsz48.png" alt="step 1"> Site name must
+contain at least 3 characters </li>
+  <li>
+ <img style="width: 15px;" src="images/step_FILL0_wght400_GRAD0_opsz48.png" alt="step 2"> Site URL must be a
+valid one
+  </li>
+</ol>
+  </div>
+</div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

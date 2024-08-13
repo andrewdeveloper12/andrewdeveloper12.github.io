@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="java.js">
+</head>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58vh;
+    margin: 0;
+    padding-top: 20px; /* Optional: Add some top padding for better appearance */
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 250px;
+    height: 80px;
+}
+
+button:hover {
+    background-color: #4CAF50;
+}
+
+h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 80px;
+    position: static;
+    
+}
+
+p {
+    font-size: 35px;
+}
+
+</style>
+<body>
+    <div>
+        <h1 style="font-weight: bolder;">Quote of the Day</h1>
+        <p>Press the button below to recieve a random quote!</p>
+        <button onclick="newQoute()">New Quote</button>
+        <p id="quote"></p>
+        <p id="auther"></p>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>

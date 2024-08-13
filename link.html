@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons and Links</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/exam.css">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <script src="js/all.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #080c0f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container .btn {
+            margin-bottom: 10px; /* Space between buttons */
+            width: 100%; /* Full-width buttons */
+            color: #fff; /* Text color */
+        }
+        .btn-custom {
+            background-color: #101518; /* Custom button color */
+            border: none; /* Remove border */
+        }
+        .btn-custom:hover {
+            background-color: #080c0f; /* Custom hover color */
+        }
+        .icon-container {
+            margin-right: 5px;
+        }
+        ul{
+            color: black;
+        }
+        .nav-link.custom-border {
+    border: 2px solid rgb(54, 54, 55);
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link.custom-border:hover {
+    border: 2px solid rgb(2, 2, 2);
+    background-color: rgb(86, 63, 63);
+    color: rgb(247, 230, 230);
+  }
+  .navbar-collapse{
+    background-color: #080808;
+  }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light w-100">
+        <a style="color: black;" class="navbar-brand" href="#">Developer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a style="color: black;" class="nav-link custom-border" onclick="location.href='index.html'" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: black;" class="nav-link custom-border" onclick="location.href='link.html'" href="#">About me</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a style="color: black;" class="nav-link dropdown-toggle custom-border" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item custom-border" href="#">Action</a>
+                        <a class="dropdown-item custom-border" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item custom-border" href="#">Something else here</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: black;" class="nav-link custom-border" onclick="location.href='link.html'" href="#">publish</a>
+                    </li>
+                    </div>
+                </li>
+                
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0" onsubmit="handleSearch(event)">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button style="background-color: rgb(8, 8, 8);" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    <br>
+    <!-- Header Section -->
+    <div class="container">
+        <h2 style="color: #fff;">My Project</h2> <br>
+        
+        <!-- Buttons Section -->
+        <div class="button-container">
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Quote.html" class="text-white">Quote of the Day</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Bookmarker.html" class="text-white">Bookmarker</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="login1.html" class="text-white">login1</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="login2.html" class="text-white">login2</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Food1.html" class="text-white">Food1</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Food2.html" class="text-white">Food2</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Daniels.html" class="text-white">Daniels</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Devfolio.html" class="text-white">Devfolio</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Games1.html" class="text-white">Games1</a>
+            </button>
+            <button class="btn btn-custom">
+                <span class="icon-container"><i class="fas "></i></span>
+                <a href="Bezel.html" class="text-white">Bezel</a>
+            </button>
+        </div>
+    </div>
+    <script>
+        function handleSearch(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            var query = document.getElementById('searchInput').value.toLowerCase();
+            if (query === 'home') {
+                window.location.href = 'index.html';
+            } else if (query === 'about') {
+                window.location.href = 'link.html';
+            } else if (query === 'learn') {
+                window.location.href = 'learn more.html';
+            } else if (query === 'publish') {
+                window.location.href = 'published.html';
+            } else {
+                // Handle other search queries or show a message
+                alert('Search query not found.');
+            }
+        }
+      </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

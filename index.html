@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/exam.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>protofolio</title>
+  </head>
+  <style>
+  
+  .nav-link.custom-border {
+    border: 2px solid rgb(54, 54, 55);
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link.custom-border:hover {
+    border: 2px solid rgb(2, 2, 2);
+    background-color: rgb(7, 7, 7);
+    color: rgb(2, 2, 2);
+  }
+  </style>
+  <body >
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <a class="navbar-brand" href="#">Developer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link custom-border" onclick="location.href='index.html'" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-border" onclick="location.href='link.html'" href="#">About me</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle custom-border" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item custom-border" href="#">Action</a>
+                <a class="dropdown-item custom-border" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item custom-border" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-border disabled" href="#">published</a>
+            </li>
+          </ul>
+        </div>
+        
+        <form class="form-inline my-2 my-lg-0" onsubmit="handleSearch(event)">
+          <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button style="background-color: rgb(128, 126, 126);" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      </nav>
+
+      <div style="height: 120%;" class="jumbotron bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                  <h1 class="display-4">Andrew Osama</h1>
+                  <p class="lead">Hello, my name is Andrew Osama. I am a web designer specializing <br> in front-end development with a background in computer science. <br> I have a passion for creating visually appealing and user-friendly <br> websites using HTML, CSS, JavaScript, Bootstrap, Angular, and React. <br> My training in computer science has equipped me with the necessary <br> skills to excel in this field, and I enjoy staying updated with the latest <br> trends and technologies in web development.</p>
+                  <button style="margin-top: 60px; border-radius: 5%;" type="button" class="btn btn-secondary btn-lg" onclick="location.href='learn more.html'">Learn more</button>
+
+                </div>
+                <div class="col-md-4">
+                  <img class="img-fluid fixed-size" src="image/1723030625012.jpg" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+    
+
+      
+
+      <!-- <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Hello, world!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet alias sed soluta, perspiciatis cum laborum!</p>
+          </div>
+          <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet alias sed soluta, perspiciatis cum laborum!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top fixed-size" src="image/rwuyqx1511383174.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top fixed-size" src="image/sxysrt1468240488.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top fixed-size" src="image/tkxquw1628771028.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+     
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script>
+        function handleSearch(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            var query = document.getElementById('searchInput').value.toLowerCase();
+            if (query === 'home') {
+                window.location.href = 'index.html';
+            } else if (query === 'about') {
+                window.location.href = 'link.html';
+            } else if (query === 'learn') {
+                window.location.href = 'learn more.html';
+            } else if (query === 'publish') { 
+                window.location.href = 'published.html';
+            } else {
+                // Handle other search queries or show a message
+                alert('Search query not found.');
+            }
+        }
+      </script>
+    </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

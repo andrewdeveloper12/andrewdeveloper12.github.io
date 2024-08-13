@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58vh;
+    margin: 0;
+    padding-top: 20px; /* Optional: Add some top padding for better appearance */
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 250px;
+    height: 80px;
+}
+
+button:hover {
+    background-color: #4CAF50;
+}
+
+h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 80px;
+    position: static;
+    
+}
+
+p {
+    font-size: 35px;
+}

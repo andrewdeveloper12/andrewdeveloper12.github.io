@@ -1,0 +1,18 @@
+<script>
+    function handleSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        var query = document.getElementById('searchInput').value.toLowerCase();
+        if (query === 'home') {
+            window.location.href = 'index.html';
+        } else if (query === 'about') {
+            window.location.href = 'link.html';
+        } else if (query === 'learn') {
+            window.location.href = 'learn more.html';
+        } else if (query === 'publish') {
+            window.location.href = 'published.html';
+        } else {
+            // Handle other search queries or show a message
+            alert('Search query not found.');
+        }
+    }
+  </script>
